@@ -1,0 +1,17 @@
+version: '2'
+services:
+    jenkins.database:
+        image: mysql:5.7
+        environment:
+            - MYSQL_ROOT_PASSWORD=123456
+            - MYSQL_DATABASE=mad_sale_v2
+
+    jenkins.server:
+        build: .
+        tty: true
+        links:
+            - jenkins.database
+        ports:
+            - 8080:8080
+        volumes:
+            - /home/diego/.ssh:/root/.ssh
