@@ -15,7 +15,7 @@ RUN apt-key add dotdeb.gpg
 RUN apt-get update
 
 # install php
-RUN apt-get install -y php7.0 php7.0-cli php7.0-json php7.0-mbstring php7.0-mysql php7.0-xml php7.0-fpm php7.0-cgi php7.0-soap git nginx zsh zip unzip
+RUN apt-get install -y php7.0 php7.0-cli php7.0-json php7.0-mbstring php7.0-mysql php7.0-xml php7.0-fpm php7.0-cgi php7.0-soap php7.0-curl git nginx zsh zip unzip
 
 # install composer
 RUN apt-get install -y curl
